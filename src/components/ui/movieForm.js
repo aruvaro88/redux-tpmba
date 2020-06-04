@@ -4,14 +4,19 @@ import { useDispatch } from "react-redux"
 
 const MovieForm = () => {
   const dispatch = useDispatch()
+  let name
+  let genre
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch(addMovie(name.value, genre.value))
+    let genreArray = genre.value.split(" ")
+      genreArray = genreArray.map((elm) => elm.toLowerCase())
+      genreArray = genreArray.filter((elm, idx) => genreArray.indexOf(elm)===idx)
+
+    dispatch(addMovie(name.value, genreArray))
     name.value = ""
     genre.value = ""
   }
-  let name
-  let genre
+
   return (
     <form onSubmit={handleSubmit}>
       Movie Name:
