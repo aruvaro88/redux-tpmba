@@ -9,8 +9,8 @@ const MovieForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     let genreArray = genre.value.split(" ")
-      genreArray = genreArray.map((elm) => elm.toLowerCase())
-      genreArray = genreArray.filter((elm, idx) => genreArray.indexOf(elm)===idx)
+    genreArray = genreArray.map((elm) => elm.toLowerCase())
+    genreArray = genreArray.filter((elm, idx) => genreArray.indexOf(elm) === idx)
 
     dispatch(addMovie(name.value, genreArray))
     name.value = ""
