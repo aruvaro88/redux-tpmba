@@ -22,7 +22,7 @@ const movieReducer = (state = [], action) => {
         }
       })
       case "REMOVE_MOVIE":
-          return state.filter(elm =>elm.id!==action.id)
+          return state.filter(elm => elm.id !== action.id)
     default:
       return state
   }
