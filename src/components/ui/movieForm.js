@@ -1,6 +1,6 @@
 import React from "react"
 import { addMovie } from "../actions/index"
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 
 const MovieForm = () => {
   const dispatch = useDispatch()

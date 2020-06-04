@@ -1,14 +1,16 @@
 import React from "react"
 import "./App.css"
 import MovieForm from "../components/ui/movieForm"
-import { addMovie } from "../components/actions/index"
-import { useSelector, useDispatch } from "react-redux"
+import MovieList from "../components/ui/MovieList"
+
 
 function App() {
-  const movieList = useSelector((state) => state.movieList)
-  const dispatch = useDispatch()
-
-  return <MovieForm />
+  return (
+    <>
+      <MovieForm />
+      <MovieList />
+    </>
+  )
 }
 
 export default App

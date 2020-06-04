@@ -1,4 +1,3 @@
-import { findAllByDisplayValue } from "@testing-library/react"
 
 let nextId = 0
 export const addMovie = (name, genre) => {
