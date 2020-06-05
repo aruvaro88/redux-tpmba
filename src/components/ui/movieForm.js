@@ -18,21 +18,23 @@ const MovieForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      Movie Name:
-      <input
-        ref={(node) => {
-          name = node
-        }}
-      />
-      Genre:
-      <input
-        ref={(node) => {
-          genre = node
-        }}
-      />
-      <button type="submit">Add Movie</button>
-    </form>
+    <section className="form-elements">
+      <form onSubmit={handleSubmit}>
+        <label for="name">Name</label>
+        <input
+          ref={(node) => {
+            name = node
+          }}
+        />
+        <label for="genre">Genre</label>
+        <input
+          ref={(node) => {
+            genre = node
+          }}
+        />
+        <button type="submit">Add Movie</button>
+      </form>
+    </section>
   )
 }
 

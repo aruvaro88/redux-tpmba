@@ -2,6 +2,7 @@ import React from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { haveSeen, removeMovie, setFilter } from "../actions/index"
 
+
 const MovieList = () => {
   const movieList = useSelector((state) => state.movieList)
   let filter = useSelector((state) => state.filter)

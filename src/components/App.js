@@ -6,10 +6,14 @@ import MovieList from "../components/ui/MovieList"
 
 function App() {
   return (
-    <>
-      <MovieForm />
-      <MovieList />
-    </>
+    <main className="movie-page">
+      <section className="movie-form">
+        <MovieForm />
+      </section>
+      <section className="movie-list">
+        <MovieList />
+      </section>
+    </main>
   )
 }
 
