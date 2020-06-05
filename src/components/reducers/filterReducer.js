@@ -1,3 +1,4 @@
+//reducer that changes the state with a genre filter
 const filterReducer = (state = [], action) => {
   switch (action.type) {
     case "SET_FILTER":

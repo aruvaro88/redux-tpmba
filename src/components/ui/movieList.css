@@ -15,6 +15,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+.movie-data p{
+    display:flex;
+    flex-direction: column;
+}
 
 .movie-card {
     border: 1px solid black;
@@ -29,5 +33,5 @@
     display: flex;
     align-items: center;
     justify-items: center;
-
+    margin-bottom:10px;
 }

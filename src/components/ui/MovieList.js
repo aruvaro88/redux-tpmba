@@ -4,14 +4,18 @@ import { haveSeen, removeMovie, setFilter } from "../actions/index"
 import "./movieList.css"
 
 const MovieList = () => {
+  //initialized variables
   const movieList = useSelector((state) => state.movieList)
   let filter = useSelector((state) => state.filter)
   const dispatch = useDispatch()
+  //sort state array of movies
   movieList.sort((a, b) => a.haveSeen - b.haveSeen)
 
+  //function to call an action which changes haveSeen property of the selected movie
   const handleChange = (movieId) => {
     dispatch(haveSeen(movieId))
   }
+//function to filter state array of movies to get movies with selected genre
   const getVisibleMovies = (movies, filter) => {
     switch (filter) {
       case "SHOW_ALL":
@@ -26,10 +30,11 @@ const MovieList = () => {
         return movies
     }
   }
+  //function to change filter state
   const handleRadio = (e) => {
     dispatch(setFilter(e.target.id))
   }
-
+//array with the movies of the selected filter
   const visibleMovies = getVisibleMovies(movieList, filter)
   return (
     <>
