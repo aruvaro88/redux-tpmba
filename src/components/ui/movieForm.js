@@ -1,6 +1,7 @@
 import React from "react"
 import { addMovie } from "../actions/index"
 import { useDispatch } from "react-redux"
+import "./movieForm.css"
 
 const MovieForm = () => {
   const dispatch = useDispatch()
@@ -32,7 +33,7 @@ const MovieForm = () => {
             genre = node
           }}
         />
-        <button type="submit">Add Movie</button>
+        <button className="button" type="submit">Add Movie</button>
       </form>
     </section>
   )

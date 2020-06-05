@@ -1,0 +1,33 @@
+.filter-nav {
+    margin-bottom: 24px;
+}
+
+.filter-radios {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-radios div {
+    margin: 5px 20px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    margin: 16px 8px;
+}
+
+.movie-buttons {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
